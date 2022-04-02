@@ -114,8 +114,8 @@ class Oriel():
 
     def remove(self):
         """
-        frees resource, removes device
-
+        frees resource, removes device,
+        it should be called before exiting an app.
         """
         usb.util.release_interface(self.device, 0)
         self.device = None
